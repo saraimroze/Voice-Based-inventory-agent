@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Inventory Agent</title>
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <div class="header-icon">🎤</div>
+    <h1>Voice-Based Inventory Agent</h1>
+
+    <!-- Status -->
+    <div class="status" id="status"></div>
+
+    <!-- Mic Button -->
+    <button class="mic-btn" id="micBtn">🎙️ Start Listening</button>
+
+    <!-- Live Command -->
+    <div class="card">
+      <h3>Live Command</h3>
+      <p id="liveText">Say something...</p>
+    </div>
+
+    <!-- Inventory Table -->
+    <div class="card">
+      <h3>Inventory Overview</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Item ID</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryBody">
+          <tr>
+            <td>A101</td>
+            <td>Mango Juice</td>
+            <td>100</td>
+            <td>boxes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Activity Log -->
+    <div class="card">
+      <h3>Recent Voice Activity</h3>
+      <ul id="activityLog"></ul>
+    </div>
+  </div>
+
+  <script src="{% static 'laya/scripts.js' %}"></script>
+</body>
+</html>
+
