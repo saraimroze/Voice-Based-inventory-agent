@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Voice Interface</title>
+
+<style>
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.mic-btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.mic-btn.recording {
+  background: #ef4444;
+}
+
+.status {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.transcript {
+  margin-top: 20px;
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 6px;
+  min-height: 40px;
+  font-size: 18px;
+}
+
+.lang-buttons {
+  margin-bottom: 20px;
+}
+
+.lang-buttons button {
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background: #e5e7eb;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.lang-buttons button.active {
+  background: #3b82f6;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="lang-buttons">
+    <button data-lang="en-IN" class="active">English</button>
+    <button data-lang="hi-IN">हिन्दी</button>
+    <button data-lang="te-IN">తెలుగు</button>
+  </div>
+
+  <button id="micBtn" class="mic-btn">🎤</button>
+
+  <div id="status" class="status">Click to speak</div>
+
+  <div id="transcript" class="transcript"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
